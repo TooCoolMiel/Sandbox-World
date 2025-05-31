@@ -66,7 +66,7 @@ bool Window::shoudWindowClose() {
 	return glfwWindowShouldClose(window_handle);
 }
 
-Window::~Window() {
+void Window::cleanUp() {
 	glfwDestroyWindow(window_handle);
 	glfwTerminate();
 }

@@ -36,6 +36,6 @@ struct Window
 	bool shoudWindowClose();
 
 	// Destroys the window and terminates GLFW
-	~Window();
+	void cleanUp();
 };
 

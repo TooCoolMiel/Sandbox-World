@@ -7,6 +7,7 @@
 #include <stdexcept>
 
 using std::string;
+using std::runtime_error;
 
 struct Shader
 {
@@ -15,6 +16,6 @@ struct Shader
 	Shader(const char* vertex_path, const char* fragment_path);
 	void start();
 	void stop();
-	~Shader();
+	void cleanUp();
 };
 
