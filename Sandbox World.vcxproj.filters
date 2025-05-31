@@ -16,6 +16,9 @@
     <Filter Include="Resource Files\Shaders">
       <UniqueIdentifier>{12900da6-168a-4505-9b89-d8efafd89c4d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Images">
+      <UniqueIdentifier>{62c74d1c-3c27-4be4-8fca-dd94f1b16463}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Downloads\glad\src\glad.c">
@@ -39,6 +42,12 @@
     <ClCompile Include="VBO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="stb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
@@ -59,6 +68,9 @@
     <ClInclude Include="VBO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Sandbox World.rc">
@@ -72,5 +84,13 @@
     <None Include="default.frag">
       <Filter>Resource Files\Shaders</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\OneDrive\Pictures\icon.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+    <Image Include="..\..\Documents\Coding projects\C Coding\Snake3D\res\images\apple.png">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
   </ItemGroup>
 </Project>

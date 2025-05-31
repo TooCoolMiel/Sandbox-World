@@ -9,7 +9,7 @@ struct VAO
 	GLuint attrib_count = 0;
 
 	VAO();
-	void addVBO(VBO& vbo, GLuint layout);
+	void addVBO(VBO& vbo, GLuint layout, GLuint size, GLenum type, GLuint stride, void* offset);
 	void start();
 	void stop();
 	void cleanUp();
