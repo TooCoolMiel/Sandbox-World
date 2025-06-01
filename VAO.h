@@ -3,6 +3,10 @@
 #include <glad/glad.h>
 #include "VBO.h"
 
+/*
+	Vertex Array Object. Contains information like positions, and texture coordinates.
+
+*/
 struct VAO
 {
 	GLuint ID;

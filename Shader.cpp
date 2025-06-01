@@ -33,7 +33,18 @@ Shader::Shader(const char* vertex_path, const char* fragment_path) {
 	GLint vertex_compile_success;
 	glGetShaderiv(vertex_ID, GL_COMPILE_STATUS, &vertex_compile_success);
 	if (!vertex_compile_success) {
-		throw runtime_error("Error Compiling Vertex Shader!\n");
+		// Get the length of the info log
+		GLint logLength;
+		glGetShaderiv(vertex_ID, GL_INFO_LOG_LENGTH, &logLength);
+
+		// Allocate a buffer and get the log
+		char* infoLog = (char*)malloc(logLength);
+		glGetShaderInfoLog(vertex_ID, logLength, NULL, infoLog);
+
+		printf("Shader compile error:\n%s\n", infoLog);
+		free(infoLog);
+
+		throw runtime_error("");
 	}
 
 	GLuint fragment_ID = glCreateShader(GL_FRAGMENT_SHADER);
@@ -43,7 +54,18 @@ Shader::Shader(const char* vertex_path, const char* fragment_path) {
 	GLint fragment_compile_success;
 	glGetShaderiv(fragment_ID, GL_COMPILE_STATUS, &fragment_compile_success);
 	if (!fragment_compile_success) {
-		throw runtime_error("Error Compiling Fragment Shader\n");
+		// Get the length of the info log
+		GLint logLength;
+		glGetShaderiv(fragment_ID, GL_INFO_LOG_LENGTH, &logLength);
+
+		// Allocate a buffer and get the log
+		char* infoLog = (char*)malloc(logLength);
+		glGetShaderInfoLog(fragment_ID, logLength, NULL, infoLog);
+
+		printf("Shader compile error:\n%s\n", infoLog);
+		free(infoLog);
+
+		throw runtime_error("");
 	}
 
 	glAttachShader(ID, vertex_ID);

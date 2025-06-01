@@ -1,9 +1,12 @@
 #include "VAO.h"
 
+
+// Creates a VAO object and generates a ID for it
 VAO::VAO() {
 	glGenVertexArrays(1, &ID);
 }
 
+// Links a VBO to the VAO 
 void VAO::addVBO(VBO& vbo, GLuint layout, GLuint size, GLenum type, GLuint stride, void* offset) {
 	vbo.start();
 	glVertexAttribPointer(layout, size, type, GL_FALSE, stride, offset);

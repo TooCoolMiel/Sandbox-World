@@ -4,6 +4,9 @@
 #include <stb/stb_image.h>
 #include "Shader.h"
 
+/*
+	Texture struct containing Texture information like the ID and texture type.
+*/
 struct Texture
 {
 	GLuint ID;

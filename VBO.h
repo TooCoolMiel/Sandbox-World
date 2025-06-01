@@ -2,6 +2,9 @@
 
 #include <glad/glad.h>
 
+/*
+	VBO stores data like positions or texture coordinates.
+*/
 struct VBO
 {
 	GLuint ID;

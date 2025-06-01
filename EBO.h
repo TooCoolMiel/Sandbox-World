@@ -2,6 +2,9 @@
 
 #include <glad/glad.h>
 
+/*
+	Index array object store VAO indices allowing for more efficent VAOs.
+*/
 struct EBO
 {
 

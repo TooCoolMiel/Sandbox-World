@@ -38,6 +38,7 @@ Window::Window(const char* title, int width, int height) :
 	// Configure GL settings
 	glViewport(0, 0, width, height);
 	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+	glEnable(GL_DEPTH_TEST);
 
 	// Configure GLFW settings
 	glfwSwapInterval(1);
@@ -52,7 +53,7 @@ Window::Window(const char* title, int width, int height) :
 
 void Window::update() {
 	// Clear the color buffer
-	glClear(GL_COLOR_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	// Poll events
 	glfwPollEvents();
